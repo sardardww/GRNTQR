@@ -1,0 +1,37 @@
+name: Kunlik Telegram va Sayt Avtopilot
+
+on:
+  schedule:
+    # Hár kúni 10:00, 14:00 hám 18:00 da (Toshkent / Nókis waqtı menen UTC 05:00, 09:00, 13:00)
+    - cron: '0 5,9,13 * * *'
+  workflow_dispatch: # Qolda "Run workflow" túymesin basıp isletiw ushın
+
+permissions:
+  contents: write
+
+jobs:
+  post-grant:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repozitoriy kodın júklep alıw
+        uses: actions/checkout@v4
+
+      - name: Python sazlaw
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Grant generatsiya qılıw, awdarıw hám Telegramǵa jiberiw
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python scripts/daily_poster.py
+
+      - name: Ózgerislerdi GitHub-qa saqlaw (Commit & Push)
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/
+          git diff-index --quiet HEAD || (git commit -m "Avtomat: Kúnlik grant qosıldı [Gemini + Telegram]" && git push)
