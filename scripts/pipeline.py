@@ -41,12 +41,16 @@ Siz Qaraqalpaq tili qánigesisiz. Tómendegi Telegram kanalı ushın tayarlanǵa
 Post shama menen 90-110 sóz bolıwı, oqıwǵa qolaylı, qaraqalpaq ádebiy tilinde (lotin álipbesinde: á, ó, ú, ǵ, ń, ı, w háripleri durıs qollanılǵan halda) bolıwı kerek.
 
 QÁDELER:
-1. Qوپal grammatikalıq, orfografiyalıq yamasa stilistikalıq qáteliklerdi (foolish mistakes) dúzetiń.
+1. Qopal grammatikalıq, orfografiyalıq yamasa stilistikalıq qáteliklerdi (foolish mistakes) dúzetiń.
 2. Emojilerdi, qalıń tekst (HTML <b>...</b> tegleri) hám strukturanı saqlań.
-3. Rásmiy siltemeni mına kóriniste qaldırıń: 🔗 <b>Arza tapsırıw:</b> <a href="{grant_link}">{grant_link}</a>
-4. Sońına mina qatardı qosıń:
+3. JAS SHEKLEWI (VOZRAST) BOYINSHA QATAŃ TALAP:
+   Postta hárbir jaǵdayda jas sheklewi (kategoriyası) anıq kórsetilgen bolıwı shárt:
+   - Eger anıq jası bar bolsa (mısalı: 18-25 jas, 30 jasqa shekem): 👤 <b>Jas sheklewi:</b> [jas aralıǵı]
+   - Eger arnawlı jas sheklewi bolmasa yamasa maǵlıwmattıń ózinde kórsetilmegen bolsa: 👤 <b>Jas sheklewi:</b> Belgilenbegen (kórsetilmegen)
+4. Rásmiy siltemeni mına kóriniste qaldırıń: 🔗 <b>Arza tapsırıw:</b> <a href="{grant_link}">{grant_link}</a>
+5. Sońına mina qatardı qosıń:
 👉 <b>Kanalǵa aǵza bolıń:</b> @jaslargrant
-5. Tek ǵana tayar Telegram post tekstin (HTML formatında) qaytarıń, hesh qanday artıqsha túsindirme jazbań!
+6. Tek ǵana tayar Telegram post tekstin (HTML formatında) qaytarıń, hesh qanday artıqsha túsindirme jazbań!
 
 POST TEKSTI:
 {karakalpak_text}
